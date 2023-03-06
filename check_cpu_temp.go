@@ -32,14 +32,16 @@ func main() {
 
 	temp := value / 1000
 
+	msg := "CPU Temperature is %dC\n"
+
 	if temp >= *c {
-		fmt.Println(temp)
+		fmt.Printf(msg, temp)
 		os.Exit(2)
 	} else if temp >= *w {
-		fmt.Println(temp)
+		fmt.Printf(msg, temp)
 		os.Exit(1)
 	} else {
-		fmt.Println(temp)
+		fmt.Printf(msg, temp)
 		os.Exit(0)
 	}
 }
